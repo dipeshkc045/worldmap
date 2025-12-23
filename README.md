@@ -91,3 +91,4 @@ node extract-geojson.js
 ## 📝 License
 
 The GeoJSON data is from the `geojson-world-map` npm package.
+# worldmap
