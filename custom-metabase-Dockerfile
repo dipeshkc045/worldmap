@@ -1,0 +1,19 @@
+FROM metabase/metabase:latest
+
+# Set working directory
+WORKDIR /app
+
+# Copy custom logo (replace the default Metabase logo)
+COPY assets/logo.svg /app/resources/frontend_client/app/assets/img/logo.svg
+
+# Optional: Copy favicon
+# COPY assets/favicon.ico /app/resources/frontend_client/app/assets/img/favicon.ico
+
+# Set environment variables for your company
+ENV MB_SITE_NAME="Your Company Analytics"
+ENV MB_SITE_URL="http://localhost:3003"
+
+# Expose port
+EXPOSE 3000
+
+# The base image already has the CMD, so we don't need to specify it again
